@@ -1,12 +1,13 @@
 import { Button } from "@/components/Button";
 import { PageHeader } from "@/components/PageHeader";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Rates",
   description:
-    "Simple per-session tutoring rates for 30, 45 or 60 minutes, in person in Lymm or online.",
-};
+    "Simple per-session tutoring rates for 30, 45 or 60 minutes for 7+, 11+ and 13+, in person in Lymm or online.",
+  path: "/rates",
+});
 
 const rates = [
   { duration: "30 minutes", price: "£30" },
@@ -39,11 +40,21 @@ export default function RatesPage() {
               </div>
             ))}
           </div>
-          <p className="mt-10 text-lg text-muted">
-            Get in touch to book a session or discuss a regular weekly slot.
-          </p>
+          <div className="mt-10 max-w-3xl space-y-4 text-lg leading-relaxed text-muted">
+            <p>
+              Each session is one-to-one and includes tailored teaching, exam
+              technique where needed, and clear feedback for parents. The same
+              rates apply in Lymm or online.
+            </p>
+            <p>
+              Regular weekly slots are available subject to diary space. If you
+              need to cancel, please give at least 24 hours&apos; notice where
+              possible so the time can be offered to another family.
+            </p>
+            <p>Get in touch to enquire about a session or a regular weekly slot.</p>
+          </div>
           <div className="mt-6">
-            <Button href="/contact">Book a session</Button>
+            <Button href="/contact">Get in touch</Button>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Moore Tuition design tokens — aligned with Starview Learning calm blue system. */
+/* Moore Tuition design tokens — calm blue system. */
 :root {
   --ground: #eef4fb;
   --surface: #ffffff;
@@ -56,6 +56,17 @@ body {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -66,4 +77,22 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border-radius: var(--radius-btn);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-soft);
 }

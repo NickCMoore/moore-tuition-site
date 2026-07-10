@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -18,6 +18,9 @@ const links = [
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const menuId = useId();
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setOpen(false);
@@ -30,16 +33,51 @@ export function Header() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const panel = panelRef.current;
+    const toggle = toggleRef.current;
+    if (!panel || !toggle) return;
+
+    const focusables = panel.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled])',
+    );
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    first?.focus();
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setOpen(false);
+        toggle?.focus();
+        return;
+      }
+      if (event.key !== "Tab" || focusables.length === 0) return;
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-surface/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-6 py-3.5">
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-6 py-3">
         <Link href="/" className="relative z-10 flex items-center no-underline">
           <Image
             src="/images/logo.png"
             alt="Moore Tuition"
             width={228}
             height={158}
-            className="h-16 w-auto sm:h-[4.5rem]"
+            className="h-12 w-auto sm:h-14"
             priority
           />
         </Link>
@@ -70,14 +108,14 @@ export function Header() {
         </nav>
 
         <button
+          ref={toggleRef}
           type="button"
           className="relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-btn border border-line bg-surface text-ink md:hidden"
           aria-expanded={open}
-          aria-controls="mobile-nav"
+          aria-controls={menuId}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((value) => !value)}
         >
-          <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
           <span className="flex w-5 flex-col gap-1.5" aria-hidden>
             <span
               className={`block h-0.5 w-full bg-ink transition ${open ? "translate-y-2 rotate-45" : ""}`}
@@ -94,7 +132,8 @@ export function Header() {
 
       {open ? (
         <div
-          id="mobile-nav"
+          ref={panelRef}
+          id={menuId}
           className="border-t border-line bg-surface md:hidden"
         >
           <nav aria-label="Mobile">

@@ -1,19 +1,20 @@
 import { Button } from "@/components/Button";
 import { PageHeader } from "@/components/PageHeader";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "CV",
   description:
-    "Nick Moore's teaching CV, covering preparatory school experience, PGCE Primary Education, and Enhanced DBS check.",
-};
+    "Nick Moore's teaching CV: preparatory school experience since 2015, PGCE Primary Education, BMus, and Enhanced DBS check. Tutoring for 7+, 11+ and 13+.",
+  path: "/cv",
+});
 
 const experience = [
   {
     years: "2015 to Present",
     title: "Academic Tutor",
-    body: "London and Manchester. Helping students secure 11+ success and places at top senior schools.",
+    body: "London and Manchester. Helping students prepare for 7+, 11+ and 13+ entrance exams and secure places at top senior schools.",
   },
   {
     years: "2017 to 2023",
@@ -23,7 +24,7 @@ const experience = [
   {
     years: "2015 to 2017",
     title: "Key Stage 2 Teacher",
-    body: "St. John's Beaumont Prep School, Windsor. Year 5 class teacher, focused on assessing children's individual academic and social needs within the classroom.",
+    body: "St John's Beaumont Prep School, Windsor. Year 5 class teacher, focused on assessing children's individual academic and social needs within the classroom.",
   },
   {
     years: "2009 to 2015",
@@ -37,7 +38,7 @@ export default function CvPage() {
     <>
       <PageHeader
         title="CV"
-        subtitle="Eight years' experience in preparatory schools and private tutoring"
+        subtitle="Tutoring and preparatory school teaching since 2015"
       />
       <section className="px-6 py-14">
         <div className="mx-auto max-w-3xl">
@@ -52,10 +53,12 @@ export default function CvPage() {
               />
             </div>
             <div>
-              <h2 className="font-head text-2xl font-semibold text-ink">Nick Moore</h2>
+              <h2 className="font-head text-2xl font-semibold text-ink">
+                Nick Moore
+              </h2>
               <p className="mt-2 text-muted">
-                Academic tutor for 11+ and 13+ · PGCE Primary Education · Enhanced
-                DBS
+                Academic tutor for 7+, 11+ and 13+ · PGCE Primary Education ·
+                BMus · Enhanced DBS
               </p>
             </div>
           </div>
@@ -92,9 +95,17 @@ export default function CvPage() {
             </div>
             <div className="rounded-card border border-line bg-surface p-6 shadow-soft">
               <h3 className="font-head text-lg font-semibold text-ink">
+                BMus
+              </h3>
+              <p className="mt-2 text-muted">University of Edinburgh.</p>
+            </div>
+            <div className="rounded-card border border-line bg-surface p-6 shadow-soft sm:col-span-2">
+              <h3 className="font-head text-lg font-semibold text-ink">
                 Enhanced DBS Check
               </h3>
-              <p className="mt-2 text-muted">Current enhanced background check held.</p>
+              <p className="mt-2 text-muted">
+                Current enhanced background check held.
+              </p>
             </div>
           </div>
 

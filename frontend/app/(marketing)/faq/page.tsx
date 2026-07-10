@@ -1,18 +1,21 @@
+import { JsonLd } from "@/components/JsonLd";
 import { PageHeader } from "@/components/PageHeader";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
+import { siteUrl } from "@/lib/site";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "FAQ",
   description:
-    "FAQs about Moore Tuition: results, online vs in-person, exam boards, qualifications and DBS.",
-};
+    "FAQs about Moore Tuition: results, online vs in-person, 7+, 11+ and 13+ exam boards, qualifications and DBS.",
+  path: "/faq",
+});
 
-const faqs = [
+export const faqs = [
   {
     question: "What success have you had with your pupils?",
     answer:
-      "My students have successfully gained entrance to many of the leading independent senior schools in the country, such as St. Paul's, King's College (Wimbledon), Epsom College, St. John's (Leatherhead) and Reed's.",
+      "My students have successfully gained entrance to many of the leading independent senior schools in the country, such as St Paul's, King's College School Wimbledon, Epsom College, St John's Leatherhead and Reed's.",
   },
   {
     question: "Which exams and boards do you cover?",
@@ -31,9 +34,24 @@ const faqs = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+  url: `${siteUrl}/faq`,
+};
+
 export default function FaqPage() {
   return (
     <>
+      <JsonLd data={faqJsonLd} />
       <PageHeader title="Frequently Asked Questions" />
       <section className="px-6 py-14">
         <div className="mx-auto max-w-3xl space-y-6">
@@ -42,15 +60,18 @@ export default function FaqPage() {
               key={faq.question}
               className="rounded-card border border-line bg-surface p-6 shadow-soft"
             >
-              <h3 className="font-head text-xl font-semibold text-ink">
+              <h2 className="font-head text-xl font-semibold text-ink">
                 {faq.question}
-              </h3>
+              </h2>
               <p className="mt-3 leading-relaxed text-muted">{faq.answer}</p>
             </div>
           ))}
           <p className="pt-2 text-muted">
             Have another question?{" "}
-            <Link href="/contact" className="font-medium text-blue-deep hover:underline">
+            <Link
+              href="/contact"
+              className="font-medium text-blue-deep hover:underline"
+            >
               Get in touch
             </Link>
             .

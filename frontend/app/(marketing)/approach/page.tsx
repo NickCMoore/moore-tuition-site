@@ -1,13 +1,14 @@
 import { Button } from "@/components/Button";
 import { PageHeader } from "@/components/PageHeader";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "My Approach",
   description:
     "A child-centred tutoring approach for 7+, 11+ and 13+, with tailored lessons, exam technique, and clear communication with parents.",
-};
+  path: "/approach",
+});
 
 export default function ApproachPage() {
   return (
@@ -88,7 +89,7 @@ export default function ApproachPage() {
             </p>
           </div>
 
-          <Button href="/contact">Book a session</Button>
+          <Button href="/contact">Get in touch</Button>
         </div>
       </section>
     </>

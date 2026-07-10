@@ -1,13 +1,14 @@
 import { Button } from "@/components/Button";
 import { PageHeader } from "@/components/PageHeader";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Subjects",
   description:
     "English, Maths, Verbal and Non-Verbal Reasoning for 7+, 11+ and 13+, including CEM, GL, ISEB and school-specific papers.",
-};
+  path: "/subjects",
+});
 
 const subjects = [
   {

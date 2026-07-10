@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka, Lexend } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
+import { defaultDescription, siteName, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -15,27 +16,20 @@ const lexend = Lexend({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const siteUrl = "https://mooretuition.com";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Moore Tuition | 11+ & 13+ Tutoring in Lymm, Cheshire",
-    template: "%s | Moore Tuition",
+    default: `${siteName} | 7+, 11+ & 13+ Tutoring in Lymm, Cheshire`,
+    template: `%s | ${siteName}`,
   },
-  description:
-    "1-to-1 English, Maths and Reasoning tutoring for 7+, 11+ and 13+ entrance exams, in person in Lymm, Cheshire or online across the UK.",
-  alternates: {
-    canonical: "/",
-  },
+  description: defaultDescription,
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: siteUrl,
-    siteName: "Moore Tuition",
-    title: "Moore Tuition | 11+ & 13+ Tutoring in Lymm, Cheshire",
-    description:
-      "1-to-1 English, Maths and Reasoning tutoring for 11+ and 13+ entrance exams, in person in Lymm or online.",
+    siteName,
+    title: `${siteName} | 7+, 11+ & 13+ Tutoring in Lymm, Cheshire`,
+    description: defaultDescription,
     images: [
       {
         url: "/images/og-image.jpg",
@@ -47,9 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Moore Tuition | 11+ & 13+ Tutoring",
-    description:
-      "1-to-1 English, Maths and Reasoning tutoring for 11+ and 13+ entrance exams.",
+    title: `${siteName} | 7+, 11+ & 13+ Tutoring`,
+    description: defaultDescription,
     images: ["/images/og-image.jpg"],
   },
   icons: {
@@ -65,10 +58,13 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-GB"
       className={`${fredoka.variable} ${lexend.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-body text-ink bg-ground">
+        <a href="#main-content" className="sr-only skip-link">
+          Skip to main content
+        </a>
         <JsonLd />
         {children}
       </body>
