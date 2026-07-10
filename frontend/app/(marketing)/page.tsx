@@ -15,11 +15,11 @@ export default function HomePage() {
     <>
       <section className="relative isolate min-h-[78vh] overflow-hidden border-b border-line">
         <Image
-          src="/images/hero-classroom-wide.jpg"
+          src="/images/hero-classroom.jpg"
           alt="Nick Moore tutoring pupils in the classroom"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[center_42%]"
           sizes="100vw"
         />
         <div

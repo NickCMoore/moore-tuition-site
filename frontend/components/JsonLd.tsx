@@ -46,18 +46,6 @@ export const mooreTuitionJsonLd = {
       opens: "08:00",
       closes: "20:00",
     },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "08:00",
-      closes: "13:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Sunday",
-      opens: "08:00",
-      closes: "12:00",
-    },
   ],
   priceRange: "£30-£50",
   makesOffer: [

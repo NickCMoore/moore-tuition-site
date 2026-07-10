@@ -82,14 +82,6 @@ export default function ContactPage() {
                     <td className="py-1.5">Monday to Friday</td>
                     <td className="py-1.5 text-right">8:00am to 8:00pm</td>
                   </tr>
-                  <tr>
-                    <td className="py-1.5">Saturday</td>
-                    <td className="py-1.5 text-right">8:00am to 1:00pm</td>
-                  </tr>
-                  <tr>
-                    <td className="py-1.5">Sunday</td>
-                    <td className="py-1.5 text-right">8:00am to 12:00pm</td>
-                  </tr>
                 </tbody>
               </table>
             </aside>

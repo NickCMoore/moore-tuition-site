@@ -25,7 +25,7 @@ export const faqs = [
   {
     question: "Are all of your classes online?",
     answer:
-      "No. I offer face-to-face sessions in Lymm, Cheshire, and online tuition for flexible support wherever you are, during the week and at weekends depending on your preferences.",
+      "No. I offer face-to-face sessions in Lymm, Cheshire, and online tuition for flexible support wherever you are, on weekdays depending on your preferences.",
   },
   {
     question: "Do you have any teaching qualifications and a background check?",
