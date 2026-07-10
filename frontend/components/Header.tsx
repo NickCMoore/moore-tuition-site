@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -18,9 +19,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-surface/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-6 py-4">
-        <Link href="/" className="font-head text-xl font-semibold text-ink no-underline">
-          Moore <span className="text-blue">Tuition</span>
+      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-6 py-3">
+        <Link href="/" className="flex items-center no-underline">
+          <Image
+            src="/images/logo.jpg"
+            alt="Moore Tuition"
+            width={160}
+            height={56}
+            className="h-11 w-auto"
+            priority
+          />
         </Link>
         <nav aria-label="Main">
           <ul className="flex flex-wrap items-center gap-1 sm:gap-2">

@@ -3,7 +3,7 @@ import Link from "next/link";
 type ButtonProps = {
   href: string;
   children: React.ReactNode;
-  variant?: "primary" | "outline";
+  variant?: "primary" | "outline" | "onDark";
   className?: string;
 };
 
@@ -19,7 +19,9 @@ export function Button({
   const styles =
     variant === "primary"
       ? "bg-blue text-white shadow-[0_4px_14px_rgba(77,134,197,0.35)] hover:bg-blue-deep"
-      : "border-2 border-blue-soft bg-surface text-blue-deep hover:border-blue hover:bg-soft";
+      : variant === "onDark"
+        ? "border-2 border-white/55 bg-white/10 text-white hover:border-white hover:bg-white/20"
+        : "border-2 border-blue-soft bg-surface text-blue-deep hover:border-blue hover:bg-soft";
 
   return (
     <Link href={href} className={`${base} ${styles} ${className}`}>

@@ -1,32 +1,37 @@
 import { Button } from "@/components/Button";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-line bg-gradient-to-br from-soft via-ground to-surface">
+      <section className="relative isolate min-h-[78vh] overflow-hidden border-b border-line">
+        <Image
+          src="/images/hero-classroom.jpg"
+          alt="Nick Moore tutoring pupils in the classroom"
+          fill
+          priority
+          className="object-cover object-[center_25%]"
+          sizes="100vw"
+        />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-40"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 20%, rgba(77,134,197,0.25), transparent 45%), radial-gradient(circle at 80% 10%, rgba(174,200,232,0.45), transparent 40%)",
-          }}
+          className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/55 to-ink/25"
         />
-        <div className="relative mx-auto flex min-h-[72vh] max-w-5xl flex-col justify-center px-6 py-20">
-          <p className="font-head text-4xl font-semibold tracking-tight text-ink sm:text-6xl">
-            Moore <span className="text-blue">Tuition</span>
+        <div className="relative mx-auto flex min-h-[78vh] max-w-5xl flex-col justify-center px-6 py-20">
+          <p className="animate-[fadeUp_0.7s_ease-out] font-head text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+            Moore <span className="text-soft-2">Tuition</span>
           </p>
-          <h1 className="mt-4 max-w-2xl font-head text-2xl font-medium text-ink sm:text-3xl">
+          <h1 className="mt-4 max-w-2xl animate-[fadeUp_0.7s_ease-out_0.08s_both] font-head text-2xl font-medium text-white sm:text-3xl">
             Learning beyond the classroom
           </h1>
-          <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
+          <p className="mt-4 max-w-xl animate-[fadeUp_0.7s_ease-out_0.16s_both] text-lg leading-relaxed text-white/85">
             One-to-one Maths, English and Reasoning tutoring for 11+ and 13+
             entrance exams, in person in Lymm, Cheshire, or online across the UK.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex animate-[fadeUp_0.7s_ease-out_0.24s_both] flex-wrap gap-3">
             <Button href="/contact">Get in touch</Button>
-            <Button href="/rates" variant="outline">
+            <Button href="/rates" variant="onDark">
               View rates
             </Button>
           </div>
@@ -34,25 +39,36 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-line bg-surface px-6 py-16">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="font-head text-3xl font-semibold text-ink">
-            An engaging, patient and empathetic tutor
-          </h2>
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
-            With eight years of experience preparing pupils for senior school
-            entrance examinations, I&apos;ve taught at leading London preparatory
-            schools since 2015 — alongside earlier work as a music teacher and
-            sports coach. I take a creative, child-centred approach: every pupil
-            has their own learning needs, whether that&apos;s processing a tricky
-            bit of content, improving their writing style, or building confidence
-            under the pressure of timed exams.
-          </p>
-          <Link
-            href="/approach"
-            className="mt-6 inline-block font-medium text-blue-deep no-underline hover:underline"
-          >
-            Read more about my approach →
-          </Link>
+        <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-card shadow-soft sm:aspect-[5/4] lg:aspect-[4/5]">
+            <Image
+              src="/images/portrait.jpg"
+              alt="Nick Moore, tutor at Moore Tuition"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+          <div>
+            <h2 className="font-head text-3xl font-semibold text-ink">
+              An engaging, patient and empathetic tutor
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted">
+              With eight years of experience preparing pupils for senior school
+              entrance examinations, I&apos;ve taught at leading London preparatory
+              schools since 2015 — alongside earlier work as a music teacher and
+              sports coach. I take a creative, child-centred approach: every pupil
+              has their own learning needs, whether that&apos;s processing a tricky
+              bit of content, improving their writing style, or building confidence
+              under the pressure of timed exams.
+            </p>
+            <Link
+              href="/approach"
+              className="mt-6 inline-block font-medium text-blue-deep no-underline hover:underline"
+            >
+              Read more about my approach →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -68,18 +84,35 @@ export default function HomePage() {
               {
                 title: "Maths",
                 body: "Calculation speed, times tables, the four operations, number relationships, measurement, mental arithmetic, geometry and data handling.",
+                image: "/images/maths.jpg",
               },
               {
                 title: "Reasoning",
                 body: "Verbal Reasoning to stretch potential ability, and Non-Verbal Reasoning to sharpen logical thinking.",
+                image: "/images/Reasoning.jpg",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-card border border-line bg-surface p-6 shadow-soft"
+                className="overflow-hidden rounded-card border border-line bg-surface shadow-soft"
               >
-                <h3 className="font-head text-xl font-semibold text-ink">{item.title}</h3>
-                <p className="mt-3 leading-relaxed text-muted">{item.body}</p>
+                {"image" in item && item.image ? (
+                  <div className="relative h-36 bg-soft">
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
+                  </div>
+                ) : null}
+                <div className="p-6">
+                  <h3 className="font-head text-xl font-semibold text-ink">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-muted">{item.body}</p>
+                </div>
               </div>
             ))}
           </div>

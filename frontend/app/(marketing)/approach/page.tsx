@@ -1,6 +1,7 @@
 import { Button } from "@/components/Button";
 import { PageHeader } from "@/components/PageHeader";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "My Approach",
@@ -15,6 +16,16 @@ export default function ApproachPage() {
       />
       <section className="px-6 py-14">
         <div className="mx-auto max-w-3xl space-y-8">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-card shadow-soft">
+            <Image
+              src="/images/hero-classroom.jpg"
+              alt="One-to-one tutoring in a classroom setting"
+              fill
+              className="object-cover object-[center_20%]"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </div>
+
           <div>
             <h2 className="font-head text-2xl font-semibold text-ink">
               Child-centred, not one-size-fits-all
