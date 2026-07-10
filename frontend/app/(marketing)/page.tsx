@@ -11,12 +11,12 @@ export default function HomePage() {
           alt="Nick Moore tutoring pupils in the classroom"
           fill
           priority
-          className="object-cover object-[center_25%]"
+          className="object-cover object-[center_58%]"
           sizes="100vw"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/55 to-ink/25"
+          className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/45 to-ink/20"
         />
         <div className="relative mx-auto flex min-h-[78vh] max-w-5xl flex-col justify-center px-6 py-20">
           <p className="animate-[fadeUp_0.7s_ease-out] font-head text-4xl font-semibold tracking-tight text-white sm:text-6xl">
