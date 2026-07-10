@@ -6,7 +6,7 @@ import { ContactForm } from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Moore Tuition in Lymm, Cheshire — email, phone, or send a message about 11+ and 13+ tutoring.",
+    "Get in touch with Moore Tuition in Lymm, Cheshire by email, phone, or send a message about 11+ and 13+ tutoring.",
 };
 
 export default function ContactPage() {
@@ -60,22 +60,22 @@ export default function ContactPage() {
               <h3 className="mt-6 font-head text-lg font-semibold text-ink">
                 Location
               </h3>
-              <p className="mt-2 text-muted">Lymm, Cheshire WA13 9RN</p>
+              <p className="mt-2 text-muted">Lymm, Cheshire WA13 0SN</p>
 
               <h3 className="mt-6 font-head text-lg font-semibold text-ink">Hours</h3>
               <table className="mt-2 w-full text-sm text-muted">
                 <tbody>
                   <tr>
-                    <td className="py-1.5">Monday – Friday</td>
-                    <td className="py-1.5 text-right">8:00am – 8:00pm</td>
+                    <td className="py-1.5">Monday to Friday</td>
+                    <td className="py-1.5 text-right">8:00am to 8:00pm</td>
                   </tr>
                   <tr>
                     <td className="py-1.5">Saturday</td>
-                    <td className="py-1.5 text-right">8:00am – 1:00pm</td>
+                    <td className="py-1.5 text-right">8:00am to 1:00pm</td>
                   </tr>
                   <tr>
                     <td className="py-1.5">Sunday</td>
-                    <td className="py-1.5 text-right">8:00am – 12:00pm</td>
+                    <td className="py-1.5 text-right">8:00am to 12:00pm</td>
                   </tr>
                 </tbody>
               </table>

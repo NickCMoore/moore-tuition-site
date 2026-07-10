@@ -32,14 +32,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-surface/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-6 py-3">
+      <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-6 py-3.5">
         <Link href="/" className="relative z-10 flex items-center no-underline">
           <Image
             src="/images/logo.png"
             alt="Moore Tuition"
-            width={160}
-            height={56}
-            className="h-11 w-auto"
+            width={228}
+            height={158}
+            className="h-16 w-auto sm:h-[4.5rem]"
             priority
           />
         </Link>

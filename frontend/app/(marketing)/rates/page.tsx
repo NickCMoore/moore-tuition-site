@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Rates",
   description:
-    "Simple per-session tutoring rates — 30, 45 or 60 minutes, in person in Lymm or online.",
+    "Simple per-session tutoring rates for 30, 45 or 60 minutes, in person in Lymm or online.",
 };
 
 const rates = [
@@ -19,7 +19,7 @@ export default function RatesPage() {
     <>
       <PageHeader
         title="Rates"
-        subtitle="Simple, per-session pricing — in person or online"
+        subtitle="Simple, per-session pricing, in person or online"
       />
       <section className="px-6 py-14">
         <div className="mx-auto max-w-5xl">

@@ -123,7 +123,7 @@ export function ContactForm() {
 
       {status === "success" ? (
         <p className="rounded-btn bg-soft px-4 py-3 text-blue-deep" role="status">
-          Thanks — your message has been sent.
+          Thanks. Your message has been sent.
         </p>
       ) : null}
       {status === "error" ? (

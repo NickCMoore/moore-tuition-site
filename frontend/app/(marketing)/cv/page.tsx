@@ -6,29 +6,29 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "CV",
   description:
-    "Nick Moore's teaching CV — preparatory school experience, PGCE Primary Education, and Enhanced DBS check.",
+    "Nick Moore's teaching CV, covering preparatory school experience, PGCE Primary Education, and Enhanced DBS check.",
 };
 
 const experience = [
   {
-    years: "2015 – Present",
+    years: "2015 to Present",
     title: "Academic Tutor",
-    body: "London & Manchester — Helping students secure 11+ success and places at top senior schools.",
+    body: "London and Manchester. Helping students secure 11+ success and places at top senior schools.",
   },
   {
-    years: "2017 – 2023",
+    years: "2017 to 2023",
     title: "Key Stage 2 Teacher",
-    body: "Rokeby Prep School, Kingston Upon Thames — Taught Year 4 and Year 5 classes, with an emphasis on differentiation of tasks to meet varied pupil needs and regular parent communication.",
+    body: "Rokeby Prep School, Kingston Upon Thames. Taught Year 4 and Year 5 classes, with an emphasis on differentiation of tasks to meet varied pupil needs and regular parent communication.",
   },
   {
-    years: "2015 – 2017",
+    years: "2015 to 2017",
     title: "Key Stage 2 Teacher",
-    body: "St. John's Beaumont Prep School, Windsor — Year 5 class teacher, focused on assessing children's individual academic and social needs within the classroom.",
+    body: "St. John's Beaumont Prep School, Windsor. Year 5 class teacher, focused on assessing children's individual academic and social needs within the classroom.",
   },
   {
-    years: "2009 – 2015",
+    years: "2009 to 2015",
     title: "Peripatetic Music Tutor",
-    body: "Camden Music Service, London — Taught over 50 students in cello, piano and music theory across private and school settings, offering individual lessons and group instrumental music workshops for all ages from 5 upwards.",
+    body: "Camden Music Service, London. Taught over 50 students in cello, piano and music theory across private and school settings, offering individual lessons and group instrumental music workshops for all ages from 5 upwards.",
   },
 ];
 

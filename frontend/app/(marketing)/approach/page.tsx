@@ -6,7 +6,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "My Approach",
   description:
-    "A child-centred tutoring approach for 7+, 11+ and 13+ — tailored lessons, exam technique, and clear communication with parents.",
+    "A child-centred tutoring approach for 7+, 11+ and 13+, with tailored lessons, exam technique, and clear communication with parents.",
 };
 
 export default function ApproachPage() {
@@ -36,13 +36,13 @@ export default function ApproachPage() {
               My approach is child-centred and adaptable, so each pupil gets
               lessons that suit their learning style and goals. I aim for a
               supportive, engaging environment where students feel motivated to
-              do their best — whether we&apos;re preparing for a highly competitive
+              do their best, whether we&apos;re preparing for a highly competitive
               school or building confidence in a challenging subject.
             </p>
             <p className="mt-3 leading-relaxed text-muted">
-              I break entrance exams into their fundamental parts —
-              comprehension, grammar, mental arithmetic and problem-solving —
-              and build in revision strategies and exam technique alongside the
+              I break entrance exams into their fundamental parts:
+              comprehension, grammar, mental arithmetic and problem-solving.
+              I also build in revision strategies and exam technique alongside the
               subject content, so pupils arrive at the exam room prepared and
               confident.
             </p>
@@ -62,7 +62,7 @@ export default function ApproachPage() {
 
           <blockquote className="rounded-card border border-line bg-surface p-6 text-lg leading-relaxed text-ink shadow-soft">
             My goal is to help each pupil become an independent learner, flourish
-            academically, and — most importantly — enjoy their educational
+            academically, and most importantly enjoy their educational
             journey.
           </blockquote>
 

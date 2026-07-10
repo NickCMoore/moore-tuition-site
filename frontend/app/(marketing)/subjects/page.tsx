@@ -6,25 +6,27 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Subjects",
   description:
-    "English, Maths, Verbal and Non-Verbal Reasoning for 7+, 11+ and 13+ — including CEM, GL, ISEB and school-specific papers.",
+    "English, Maths, Verbal and Non-Verbal Reasoning for 7+, 11+ and 13+, including CEM, GL, ISEB and school-specific papers.",
 };
 
 const subjects = [
   {
     title: "English",
-    body: "Comprehension, spelling, punctuation and grammar — building pupils' ability to read closely and write cohesively, from primary curriculum support through to 11+ and 13+ papers.",
+    body: "Comprehension, spelling, punctuation and grammar, building pupils' ability to read closely and write cohesively, from primary curriculum support through to 11+ and 13+ papers.",
     image: "/images/kids-handwriting.jpg",
     imageAlt: "Pupil practising handwriting and vocabulary",
   },
   {
     title: "Maths",
-    body: "Calculation speed, times tables, the four operations, number relationships, measurement, mental arithmetic, geometry and data handling — with exam technique for timed papers.",
+    body: "Calculation speed, times tables, the four operations, number relationships, measurement, mental arithmetic, geometry and data handling, with exam technique for timed papers.",
     image: "/images/maths.jpg",
     imageAlt: "Maths doodle illustration",
   },
   {
     title: "Verbal Reasoning",
-    body: "Verbal Reasoning tests a pupil's potential ability rather than just what they can already do — we work on the patterns and thinking skills behind the question types, not just rote practice.",
+    body: "Verbal Reasoning tests a pupil's potential ability rather than just what they can already do. We work on the patterns and thinking skills behind the question types, not just rote practice.",
+    image: "/images/verbal-reasoning.jpg",
+    imageAlt: "Example verbal reasoning letter sequence and word analogy questions",
   },
   {
     title: "Non-Verbal Reasoning",
@@ -45,7 +47,7 @@ export default function SubjectsPage() {
         <div className="mx-auto max-w-5xl">
           <p className="mb-10 max-w-3xl text-lg leading-relaxed text-muted">
             I prepare pupils for a range of formats, including CEM, GL, ISEB and
-            school-specific assessments — always tailored to the schools you&apos;re
+            school-specific assessments, always tailored to the schools you&apos;re
             aiming for.
           </p>
           <div className="grid gap-6 sm:grid-cols-2">

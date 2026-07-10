@@ -1,6 +1,6 @@
 const siteUrl = "https://mooretuition.com";
 
-/** LocalBusiness + EducationalOrganization — facts only from the live site. */
+/** LocalBusiness + EducationalOrganization: facts only from the live site. */
 export const mooreTuitionJsonLd = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "EducationalOrganization"],
@@ -16,7 +16,7 @@ export const mooreTuitionJsonLd = {
     "@type": "PostalAddress",
     addressLocality: "Lymm",
     addressRegion: "Cheshire",
-    postalCode: "WA13 9RN",
+    postalCode: "WA13 0SN",
     addressCountry: "GB",
   },
   areaServed: [

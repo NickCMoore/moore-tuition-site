@@ -60,7 +60,7 @@ export default function HomePage() {
               helped pupils gain places at schools such as St Paul&apos;s, Epsom
               College and King&apos;s College School Wimbledon. I specialise in
               English, Maths and Reasoning, and I&apos;m familiar with CEM, GL,
-              ISEB and school-specific assessments — always shaped around each
+              ISEB and school-specific assessments, always shaped around each
               pupil&apos;s needs, whether that&apos;s a competitive entrance process
               or building confidence in a tricky subject.
             </p>
@@ -81,7 +81,7 @@ export default function HomePage() {
             {[
               {
                 title: "English",
-                body: "Comprehension, spelling, punctuation and grammar — building pupils' ability to read closely and write cohesively.",
+                body: "Comprehension, spelling, punctuation and grammar, building pupils' ability to read closely and write cohesively.",
                 image: "/images/kids-handwriting.jpg",
               },
               {
@@ -138,22 +138,22 @@ export default function HomePage() {
               quick to highlight pupils&apos; strengths and areas for
               development.&rdquo;
               <footer className="mt-5 text-base font-medium text-muted">
-                — Parent of an 11+ student (Hampton School and Reed&apos;s School)
+                Parent of an 11+ student (Hampton School and Reed&apos;s School)
               </footer>
             </blockquote>
             <blockquote className="rounded-card border border-line bg-ground p-8 text-lg leading-relaxed text-ink shadow-soft">
               &ldquo;Nick works with our son to introduce topics slowly, with a
               focus on the structure and technical detail needed in exams.&rdquo;
               <footer className="mt-5 text-base font-medium text-muted">
-                — Parent of an 11+ student (Hampton School and Reed&apos;s School)
+                Parent of an 11+ student (Hampton School and Reed&apos;s School)
               </footer>
             </blockquote>
           </div>
           <p className="mt-6 max-w-3xl text-muted">
             Happy to talk through how sessions work and whether I&apos;m a good
-            fit for your child —{" "}
+            fit for your child.{" "}
             <Link href="/contact" className="font-medium text-blue-deep hover:underline">
-              get in touch
+              Get in touch
             </Link>
             .
           </p>
