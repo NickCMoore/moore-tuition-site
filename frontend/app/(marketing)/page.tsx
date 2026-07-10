@@ -7,25 +7,25 @@ export default function HomePage() {
     <>
       <section className="relative isolate min-h-[78vh] overflow-hidden border-b border-line">
         <Image
-          src="/images/hero-classroom.jpg"
+          src="/images/hero-classroom-wide.jpg"
           alt="Nick Moore tutoring pupils in the classroom"
           fill
           priority
-          className="object-cover object-[center_58%]"
+          className="object-cover object-center"
           sizes="100vw"
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/45 to-ink/20"
+          className="absolute inset-0 bg-gradient-to-r from-ink/55 via-ink/25 to-transparent"
         />
         <div className="relative mx-auto flex min-h-[78vh] max-w-5xl flex-col justify-center px-6 py-20">
-          <p className="animate-[fadeUp_0.7s_ease-out] font-head text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+          <p className="animate-[fadeUp_0.7s_ease-out] font-head text-4xl font-semibold tracking-tight text-white sm:text-6xl drop-shadow-sm">
             Moore <span className="text-soft-2">Tuition</span>
           </p>
-          <h1 className="mt-4 max-w-2xl animate-[fadeUp_0.7s_ease-out_0.08s_both] font-head text-2xl font-medium text-white sm:text-3xl">
+          <h1 className="mt-4 max-w-2xl animate-[fadeUp_0.7s_ease-out_0.08s_both] font-head text-2xl font-medium text-white sm:text-3xl drop-shadow-sm">
             Learning beyond the classroom
           </h1>
-          <p className="mt-4 max-w-xl animate-[fadeUp_0.7s_ease-out_0.16s_both] text-lg leading-relaxed text-white/85">
+          <p className="mt-4 max-w-xl animate-[fadeUp_0.7s_ease-out_0.16s_both] text-lg leading-relaxed text-white/90 drop-shadow-sm">
             One-to-one Maths, English and Reasoning tutoring for 7+, 11+ and 13+
             entrance exams, in person in Lymm, Cheshire, or online across the UK.
           </p>
