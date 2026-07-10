@@ -6,19 +6,19 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Subjects",
   description:
-    "English, Maths, Verbal Reasoning and Non-Verbal Reasoning tutoring for 11+ and 13+ entrance exams.",
+    "English, Maths, Verbal and Non-Verbal Reasoning for 7+, 11+ and 13+ — including CEM, GL, ISEB and school-specific papers.",
 };
 
 const subjects = [
   {
     title: "English",
-    body: "Instruction focuses on a pupil's ability to comprehend a piece of text (reading), on their spelling, and their ability to write cohesively (punctuation and grammar).",
+    body: "Comprehension, spelling, punctuation and grammar — building pupils' ability to read closely and write cohesively, from primary curriculum support through to 11+ and 13+ papers.",
     image: "/images/kids-handwriting.jpg",
     imageAlt: "Pupil practising handwriting and vocabulary",
   },
   {
     title: "Maths",
-    body: "Pupils are tested over a huge range of topics, including calculation speed, multiplication tables, the four basic operations, number relationships, measurement, mental arithmetic, geometry and data handling.",
+    body: "Calculation speed, times tables, the four operations, number relationships, measurement, mental arithmetic, geometry and data handling — with exam technique for timed papers.",
     image: "/images/maths.jpg",
     imageAlt: "Maths doodle illustration",
   },
@@ -39,10 +39,15 @@ export default function SubjectsPage() {
     <>
       <PageHeader
         title="Subjects"
-        subtitle="English, Maths and Reasoning for 11+ and 13+ entrance exams"
+        subtitle="English, Maths and Reasoning for 7+, 11+ and 13+ entrance exams"
       />
       <section className="px-6 py-14">
         <div className="mx-auto max-w-5xl">
+          <p className="mb-10 max-w-3xl text-lg leading-relaxed text-muted">
+            I prepare pupils for a range of formats, including CEM, GL, ISEB and
+            school-specific assessments — always tailored to the schools you&apos;re
+            aiming for.
+          </p>
           <div className="grid gap-6 sm:grid-cols-2">
             {subjects.map((subject) => (
               <div

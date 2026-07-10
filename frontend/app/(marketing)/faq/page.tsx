@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about Moore Tuition — results, online vs in-person sessions, qualifications and DBS.",
+    "FAQs about Moore Tuition — results, online vs in-person, exam boards, qualifications and DBS.",
 };
 
 const faqs = [
@@ -15,14 +15,19 @@ const faqs = [
       "My students have successfully gained entrance to many of the leading independent senior schools in the country, such as St. Paul's, King's College (Wimbledon), Epsom College, St. John's (Leatherhead) and Reed's.",
   },
   {
+    question: "Which exams and boards do you cover?",
+    answer:
+      "I tutor for 7+, 11+ and 13+ entrance exams in English, Maths and Reasoning, and I'm familiar with CEM, GL, ISEB and school-specific assessments.",
+  },
+  {
     question: "Are all of your classes online?",
     answer:
-      "I am able to offer face-to-face or online tutoring during the week and at weekends, depending on your preferences.",
+      "No — I offer face-to-face sessions in Lymm, Cheshire, and online tuition for flexible support wherever you are, during the week and at weekends depending on your preferences.",
   },
   {
     question: "Do you have any teaching qualifications and a background check?",
     answer:
-      "I qualified as a teacher in 2015 with a PGCE (Primary Education) from the University of Bedfordshire. I hold an Enhanced DBS check.",
+      "I qualified as a teacher in 2015 with a PGCE (Primary Education) from the University of Bedfordshire. I also hold a BMus from the University of Edinburgh, and an Enhanced DBS check.",
   },
 ];
 

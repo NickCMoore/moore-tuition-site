@@ -6,7 +6,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "My Approach",
   description:
-    "A child-centred tutoring approach combining academic mentoring with pastoral support for 11+ and 13+ preparation.",
+    "A child-centred tutoring approach for 7+, 11+ and 13+ — tailored lessons, exam technique, and clear communication with parents.",
 };
 
 export default function ApproachPage() {
@@ -30,54 +30,61 @@ export default function ApproachPage() {
 
           <div>
             <h2 className="font-head text-2xl font-semibold text-ink">
-              Child-centred, not one-size-fits-all
+              Child-centred and adaptable
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
-              I take a creative, child-centred approach to my teaching. Every
-              pupil has their own learning needs, whether that&apos;s processing a
-              tricky bit of content, improving their writing style, or building
-              confidence in the pressure of timed exams.
+              My approach is child-centred and adaptable, so each pupil gets
+              lessons that suit their learning style and goals. I aim for a
+              supportive, engaging environment where students feel motivated to
+              do their best — whether we&apos;re preparing for a highly competitive
+              school or building confidence in a challenging subject.
             </p>
             <p className="mt-3 leading-relaxed text-muted">
-              I break entrance examinations down into their constituent parts —
-              comprehension, grammar, mental arithmetic and problem-solving — and
-              build in revision strategies and exam technique alongside the
-              subject content itself, so pupils arrive at the exam room feeling
-              prepared and confident.
+              I break entrance exams into their fundamental parts —
+              comprehension, grammar, mental arithmetic and problem-solving —
+              and build in revision strategies and exam technique alongside the
+              subject content, so pupils arrive at the exam room prepared and
+              confident.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-head text-2xl font-semibold text-ink">
+              Familiar with the main exam boards
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              I&apos;m familiar with a range of exam boards and requirements,
+              including CEM, GL, ISEB and school-specific assessments. That means
+              we can practise in the style your child will actually meet on the
+              day, not just generic worksheets.
             </p>
           </div>
 
           <blockquote className="rounded-card border border-line bg-surface p-6 text-lg leading-relaxed text-ink shadow-soft">
-            Working one-to-one means that I can shape my teaching to suit each
-            pupil and their family. It&apos;s my role to create the learning
-            conditions that enable each pupil to flourish, become independent
-            learners, and, most importantly, to enjoy their education.
+            My goal is to help each pupil become an independent learner, flourish
+            academically, and — most importantly — enjoy their educational
+            journey.
           </blockquote>
 
           <div>
             <h2 className="font-head text-2xl font-semibold text-ink">
-              Clear communication
+              Clear communication with parents
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
-              While my teaching style is flexible, I always communicate my
-              expectations clearly and work with transparency regarding pupils&apos;
-              goals and progress — so parents always know where their child
-              stands and what we&apos;re working towards.
+              I keep communication open with parents and pupils, so expectations,
+              goals and progress stay transparent and aligned. You&apos;ll always
+              know where your child stands and what we&apos;re working towards.
             </p>
           </div>
 
           <div>
             <h2 className="font-head text-2xl font-semibold text-ink">
-              A tutor who&apos;s also a mentor
+              In person or online
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
-              I&apos;m an engaging, patient and empathetic preparatory school
-              teacher with eight years of experience tutoring students for senior
-              school entrance examinations, while also supporting primary
-              curriculum learning. A good tutor should be both an academic and a
-              pastoral mentor — that combination of patience, active listening,
-              and tailoring my teaching style to a student&apos;s strengths and
-              interests is what makes studying relaxed, and fun.
+              Alongside sessions in Lymm, Cheshire, I offer online tuition for
+              flexible, consistent support wherever you are. The same
+              child-centred approach applies either way.
             </p>
           </div>
 

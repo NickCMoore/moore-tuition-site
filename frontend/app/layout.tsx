@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Moore Tuition",
   },
   description:
-    "1-to-1 English, Maths and Reasoning tutoring for 11+ and 13+ entrance exams, in person in Lymm, Cheshire or online across the UK.",
+    "1-to-1 English, Maths and Reasoning tutoring for 7+, 11+ and 13+ entrance exams, in person in Lymm, Cheshire or online across the UK.",
   alternates: {
     canonical: "/",
   },

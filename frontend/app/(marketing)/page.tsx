@@ -26,7 +26,7 @@ export default function HomePage() {
             Learning beyond the classroom
           </h1>
           <p className="mt-4 max-w-xl animate-[fadeUp_0.7s_ease-out_0.16s_both] text-lg leading-relaxed text-white/85">
-            One-to-one Maths, English and Reasoning tutoring for 11+ and 13+
+            One-to-one Maths, English and Reasoning tutoring for 7+, 11+ and 13+
             entrance exams, in person in Lymm, Cheshire, or online across the UK.
           </p>
           <div className="mt-8 flex animate-[fadeUp_0.7s_ease-out_0.24s_both] flex-wrap gap-3">
@@ -54,13 +54,15 @@ export default function HomePage() {
               An engaging, patient and empathetic tutor
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">
-              With eight years of experience preparing pupils for senior school
-              entrance examinations, I&apos;ve taught at leading London preparatory
-              schools since 2015 — alongside earlier work as a music teacher and
-              sports coach. I take a creative, child-centred approach: every pupil
-              has their own learning needs, whether that&apos;s processing a tricky
-              bit of content, improving their writing style, or building confidence
-              under the pressure of timed exams.
+              I&apos;m an experienced, empathetic preparatory school teacher with
+              over eight years tutoring children for entrance exams, including
+              7+, 11+ and 13+. I&apos;ve taught at leading London prep schools and
+              helped pupils gain places at schools such as St Paul&apos;s, Epsom
+              College and King&apos;s College School Wimbledon. I specialise in
+              English, Maths and Reasoning, and I&apos;m familiar with CEM, GL,
+              ISEB and school-specific assessments — always shaped around each
+              pupil&apos;s needs, whether that&apos;s a competitive entrance process
+              or building confidence in a tricky subject.
             </p>
             <Link
               href="/approach"
