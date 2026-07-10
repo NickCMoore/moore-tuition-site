@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* Moore Tuition design tokens — aligned with Starview Learning calm blue system. */
+:root {
+  --ground: #eef4fb;
+  --surface: #ffffff;
+  --soft: #e3eefb;
+  --soft-2: #cfe0f3;
+  --line: #dbe7f6;
+  --blue: #4d86c5;
+  --blue-deep: #3a6fa8;
+  --blue-soft: #aec8e8;
+  --ink: #2a3a4d;
+  --muted: #7d93ab;
+  --cheek: #f6c9c0;
+}
+
+@theme inline {
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-soft: var(--soft);
+  --color-soft-2: var(--soft-2);
+  --color-line: var(--line);
+  --color-blue: var(--blue);
+  --color-blue-deep: var(--blue-deep);
+  --color-blue-soft: var(--blue-soft);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-cheek: var(--cheek);
+
+  --font-head: var(--font-fredoka), system-ui, sans-serif;
+  --font-body: var(--font-lexend), system-ui, sans-serif;
+
+  --radius-card: 26px;
+  --radius-bubble: 22px;
+  --radius-btn: 16px;
+
+  --shadow-soft: 0 18px 44px -22px rgba(40, 80, 130, 0.28),
+    0 2px 6px rgba(40, 80, 130, 0.05);
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-body);
+}

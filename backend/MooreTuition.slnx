@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MooreTuition.Api.Tests/MooreTuition.Api.Tests.csproj" />
+  <Project Path="MooreTuition.Api/MooreTuition.Api.csproj" />
+</Solution>

@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+Frontend/node_modules/
+
+# Next.js
+Frontend/.next/
+Frontend/out/
+
+# Env
+Frontend/.env*.local
+!.env.local.example
+
+# .NET
+backend/**/bin/
+backend/**/obj/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vs/
+*.user
