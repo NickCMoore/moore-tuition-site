@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 
-const apiUrl =
-  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") ?? "http://localhost:5199";
-
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm() {
@@ -17,24 +14,21 @@ export function ContactForm() {
     setErrorMessage("");
 
     const form = event.currentTarget;
-    const data = new FormData(form);
+    const formData = new FormData(form);
 
     try {
-      const response = await fetch(`${apiUrl}/api/contact`, {
+      // Netlify Forms: POST to the static detection file, not a Next.js route.
+      const response = await fetch("/__forms.html", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          firstName: data.get("firstName"),
-          lastName: data.get("lastName"),
-          email: data.get("email"),
-          message: data.get("message"),
-        }),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(
+          [...formData.entries()] as [string, string][],
+        ).toString(),
       });
 
       if (!response.ok) {
-        const problem = await response.json().catch(() => null);
         throw new Error(
-          problem?.title ?? "Something went wrong. Please try again or email directly.",
+          "Something went wrong. Please try again or email directly.",
         );
       }
 
@@ -54,7 +48,18 @@ export function ContactForm() {
     "mt-1 w-full rounded-btn border-2 border-soft-2 bg-surface px-4 py-3 text-ink outline-none transition focus:border-blue";
 
   return (
-    <form className="space-y-5" onSubmit={handleSubmit}>
+    <form
+      name="contact"
+      className="space-y-5"
+      onSubmit={handleSubmit}
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p className="hidden" aria-hidden="true">
+        <label>
+          Don’t fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
+
       <div>
         <label htmlFor="firstName" className="text-sm font-medium text-ink">
           First name
