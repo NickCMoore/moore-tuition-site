@@ -127,16 +127,26 @@ export default function HomePage() {
       <section className="border-b border-line bg-surface px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <h2 className="font-head text-3xl font-semibold text-ink">
-            What parents notice
+            What parents say
           </h2>
-          <blockquote className="mt-8 max-w-3xl rounded-card border border-line bg-ground p-8 text-xl leading-relaxed text-ink shadow-soft">
-            &ldquo;Nick&apos;s patience and clear updates made the whole process
-            calmer for us. Our son went into his exams feeling prepared — and
-            proud of the work he&apos;d done.&rdquo;
-            <footer className="mt-5 text-base font-medium text-muted">
-              — Parent of an 11+ pupil
-            </footer>
-          </blockquote>
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <blockquote className="rounded-card border border-line bg-ground p-8 text-lg leading-relaxed text-ink shadow-soft">
+              &ldquo;Nick is very engaged with both pupil and parent. He seems to
+              understand and build upon the pupil&apos;s progress in school and is
+              quick to highlight pupils&apos; strengths and areas for
+              development.&rdquo;
+              <footer className="mt-5 text-base font-medium text-muted">
+                — Parent of an 11+ student (Hampton School and Reed&apos;s School)
+              </footer>
+            </blockquote>
+            <blockquote className="rounded-card border border-line bg-ground p-8 text-lg leading-relaxed text-ink shadow-soft">
+              &ldquo;Nick works with our son to introduce topics slowly, with a
+              focus on the structure and technical detail needed in exams.&rdquo;
+              <footer className="mt-5 text-base font-medium text-muted">
+                — Parent of an 11+ student (Hampton School and Reed&apos;s School)
+              </footer>
+            </blockquote>
+          </div>
           <p className="mt-6 max-w-3xl text-muted">
             Happy to talk through how sessions work and whether I&apos;m a good
             fit for your child —{" "}
