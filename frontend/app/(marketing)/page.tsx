@@ -124,6 +124,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="border-b border-line bg-surface px-6 py-16">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-head text-3xl font-semibold text-ink">
+            What parents notice
+          </h2>
+          <blockquote className="mt-8 max-w-3xl rounded-card border border-line bg-ground p-8 text-xl leading-relaxed text-ink shadow-soft">
+            &ldquo;Nick&apos;s patience and clear updates made the whole process
+            calmer for us. Our son went into his exams feeling prepared — and
+            proud of the work he&apos;d done.&rdquo;
+            <footer className="mt-5 text-base font-medium text-muted">
+              — Parent of an 11+ pupil
+            </footer>
+          </blockquote>
+          <p className="mt-6 max-w-3xl text-muted">
+            Happy to talk through how sessions work and whether I&apos;m a good
+            fit for your child —{" "}
+            <Link href="/contact" className="font-medium text-blue-deep hover:underline">
+              get in touch
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
       <section className="bg-soft/50 px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <h2 className="font-head text-3xl font-semibold text-ink">Track record</h2>

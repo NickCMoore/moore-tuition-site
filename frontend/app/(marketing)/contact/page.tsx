@@ -5,6 +5,8 @@ import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
+  description:
+    "Get in touch with Moore Tuition in Lymm, Cheshire — email, phone, or send a message about 11+ and 13+ tutoring.",
 };
 
 export default function ContactPage() {

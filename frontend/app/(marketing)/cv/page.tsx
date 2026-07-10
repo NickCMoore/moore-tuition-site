@@ -1,9 +1,12 @@
 import { Button } from "@/components/Button";
 import { PageHeader } from "@/components/PageHeader";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "CV",
+  description:
+    "Nick Moore's teaching CV — preparatory school experience, PGCE Primary Education, and Enhanced DBS check.",
 };
 
 const experience = [
@@ -38,6 +41,25 @@ export default function CvPage() {
       />
       <section className="px-6 py-14">
         <div className="mx-auto max-w-3xl">
+          <div className="mb-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+            <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full border-4 border-soft shadow-soft">
+              <Image
+                src="/images/portrait.jpg"
+                alt="Nick Moore"
+                fill
+                className="object-cover object-top"
+                sizes="144px"
+              />
+            </div>
+            <div>
+              <h2 className="font-head text-2xl font-semibold text-ink">Nick Moore</h2>
+              <p className="mt-2 text-muted">
+                Academic tutor for 11+ and 13+ · PGCE Primary Education · Enhanced
+                DBS
+              </p>
+            </div>
+          </div>
+
           <h2 className="font-head text-2xl font-semibold text-ink">Experience</h2>
           <div className="mt-6 space-y-6">
             {experience.map((item) => (

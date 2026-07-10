@@ -4,6 +4,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "FAQ",
+  description:
+    "Frequently asked questions about Moore Tuition — results, online vs in-person sessions, qualifications and DBS.",
 };
 
 const faqs = [

@@ -5,6 +5,8 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "My Approach",
+  description:
+    "A child-centred tutoring approach combining academic mentoring with pastoral support for 11+ and 13+ preparation.",
 };
 
 export default function ApproachPage() {

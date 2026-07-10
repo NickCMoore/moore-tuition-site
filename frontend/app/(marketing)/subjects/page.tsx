@@ -5,6 +5,8 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Subjects",
+  description:
+    "English, Maths, Verbal Reasoning and Non-Verbal Reasoning tutoring for 11+ and 13+ entrance exams.",
 };
 
 const subjects = [

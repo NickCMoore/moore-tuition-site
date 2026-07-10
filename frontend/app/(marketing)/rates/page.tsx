@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Rates",
+  description:
+    "Simple per-session tutoring rates — 30, 45 or 60 minutes, in person in Lymm or online.",
 };
 
 const rates = [
