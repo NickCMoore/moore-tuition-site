@@ -42,10 +42,6 @@ When you are happy with the new site:
 1. Unpublish or delete the Wix site, or redirect it to https://mooretuition.com
 2. Update Google Business / social links to the new domain
 
-## Replace the sample parent quote
-
-Home includes a short parent-style testimonial for layout. Swap it for a real quote (with permission) in `frontend/app/(marketing)/page.tsx`.
-
 ## Project structure
 
 ```
