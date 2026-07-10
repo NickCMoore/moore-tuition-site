@@ -18,10 +18,10 @@ export default function ApproachPage() {
         <div className="mx-auto max-w-3xl space-y-8">
           <div className="relative aspect-[16/9] overflow-hidden rounded-card shadow-soft">
             <Image
-              src="/images/hero-classroom.jpg"
-              alt="One-to-one tutoring in a classroom setting"
+              src="/images/teacher-student.jpg"
+              alt="One-to-one tutoring over books and notes"
               fill
-              className="object-cover object-[center_20%]"
+              className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>

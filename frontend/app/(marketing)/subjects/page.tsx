@@ -11,6 +11,8 @@ const subjects = [
   {
     title: "English",
     body: "Instruction focuses on a pupil's ability to comprehend a piece of text (reading), on their spelling, and their ability to write cohesively (punctuation and grammar).",
+    image: "/images/kids-handwriting.jpg",
+    imageAlt: "Pupil practising handwriting and vocabulary",
   },
   {
     title: "Maths",

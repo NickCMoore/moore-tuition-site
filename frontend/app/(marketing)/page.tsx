@@ -80,6 +80,7 @@ export default function HomePage() {
               {
                 title: "English",
                 body: "Comprehension, spelling, punctuation and grammar — building pupils' ability to read closely and write cohesively.",
+                image: "/images/kids-handwriting.jpg",
               },
               {
                 title: "Maths",
@@ -96,17 +97,15 @@ export default function HomePage() {
                 key={item.title}
                 className="overflow-hidden rounded-card border border-line bg-surface shadow-soft"
               >
-                {"image" in item && item.image ? (
-                  <div className="relative h-36 bg-soft">
-                    <Image
-                      src={item.image}
-                      alt=""
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 33vw"
-                    />
-                  </div>
-                ) : null}
+                <div className="relative h-36 bg-soft">
+                  <Image
+                    src={item.image}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="font-head text-xl font-semibold text-ink">
                     {item.title}
