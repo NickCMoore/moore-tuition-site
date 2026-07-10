@@ -22,7 +22,7 @@ export default function ApproachPage() {
           <div className="relative aspect-[16/9] overflow-hidden rounded-card shadow-soft">
             <Image
               src="/images/teacher-student.jpg"
-              alt="One-to-one tutoring over books and notes"
+              alt="Nick Moore working one-to-one with a pupil over books and notes"
               fill
               className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 768px"

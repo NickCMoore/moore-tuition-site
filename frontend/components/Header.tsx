@@ -74,7 +74,7 @@ export function Header() {
         <Link href="/" className="relative z-10 flex items-center no-underline">
           <Image
             src="/images/logo.png"
-            alt="Moore Tuition"
+            alt="Moore Tuition logo"
             width={228}
             height={158}
             className="h-12 w-auto sm:h-14"
@@ -107,27 +107,36 @@ export function Header() {
           </ul>
         </nav>
 
-        <button
-          ref={toggleRef}
-          type="button"
-          className="relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-btn border border-line bg-surface text-ink md:hidden"
-          aria-expanded={open}
-          aria-controls={menuId}
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((value) => !value)}
-        >
-          <span className="flex w-5 flex-col gap-1.5" aria-hidden>
-            <span
-              className={`block h-0.5 w-full bg-ink transition ${open ? "translate-y-2 rotate-45" : ""}`}
-            />
-            <span
-              className={`block h-0.5 w-full bg-ink transition ${open ? "opacity-0" : ""}`}
-            />
-            <span
-              className={`block h-0.5 w-full bg-ink transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
-            />
-          </span>
-        </button>
+        <div className="relative z-10 flex items-center gap-2 md:hidden">
+          <a
+            href="tel:07782216304"
+            className="inline-flex h-11 items-center rounded-btn bg-blue px-3 text-sm font-semibold text-white no-underline"
+            aria-label={`Call ${"07782 216304"}`}
+          >
+            Call
+          </a>
+          <button
+            ref={toggleRef}
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-btn border border-line bg-surface text-ink"
+            aria-expanded={open}
+            aria-controls={menuId}
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span className="flex w-5 flex-col gap-1.5" aria-hidden>
+              <span
+                className={`block h-0.5 w-full bg-ink transition ${open ? "translate-y-2 rotate-45" : ""}`}
+              />
+              <span
+                className={`block h-0.5 w-full bg-ink transition ${open ? "opacity-0" : ""}`}
+              />
+              <span
+                className={`block h-0.5 w-full bg-ink transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
+              />
+            </span>
+          </button>
+        </div>
       </div>
 
       {open ? (
@@ -158,6 +167,14 @@ export function Header() {
                   </li>
                 );
               })}
+              <li>
+                <a
+                  href="tel:07782216304"
+                  className="mt-2 block rounded-btn bg-blue px-3 py-3 text-center text-base font-semibold text-white no-underline"
+                >
+                  Call 07782 216304
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

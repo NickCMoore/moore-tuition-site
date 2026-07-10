@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { contactEmail } from "@/lib/site";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -28,7 +29,7 @@ export function ContactForm() {
 
       if (!response.ok) {
         throw new Error(
-          "Something went wrong. Please try again or email directly.",
+          `Something went wrong. Please try again or email ${contactEmail}.`,
         );
       }
 
@@ -39,7 +40,7 @@ export function ContactForm() {
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : "Something went wrong. Please try again or email directly.",
+          : `Something went wrong. Please try again or email ${contactEmail}.`,
       );
     }
   }
@@ -50,13 +51,18 @@ export function ContactForm() {
   return (
     <form
       name="contact"
+      method="POST"
+      action="/__forms.html"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
       className="space-y-5"
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
       <p className="hidden" aria-hidden="true">
         <label>
-          Don’t fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          Don’t fill this out:{" "}
+          <input name="bot-field" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
 
@@ -70,6 +76,7 @@ export function ContactForm() {
           type="text"
           required
           maxLength={100}
+          autoComplete="given-name"
           className={fieldClass}
         />
       </div>
@@ -83,6 +90,7 @@ export function ContactForm() {
           type="text"
           required
           maxLength={100}
+          autoComplete="family-name"
           className={fieldClass}
         />
       </div>
@@ -96,6 +104,7 @@ export function ContactForm() {
           type="email"
           required
           maxLength={254}
+          autoComplete="email"
           className={fieldClass}
         />
       </div>
@@ -118,16 +127,17 @@ export function ContactForm() {
         disabled={status === "submitting"}
         className="rounded-btn bg-blue px-5 py-3 font-head text-lg font-semibold text-white shadow-[0_4px_14px_rgba(77,134,197,0.35)] transition hover:bg-blue-deep disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "submitting" ? "Sending…" : "Send"}
+        {status === "submitting" ? "Sending…" : "Send message"}
       </button>
 
       {status === "success" ? (
         <p className="rounded-btn bg-soft px-4 py-3 text-blue-deep" role="status">
-          Thanks. Your message has been sent.
+          Thanks. Your message has been sent. I&apos;ll get back to you by email
+          as soon as I can.
         </p>
       ) : null}
       {status === "error" ? (
-        <p className="rounded-btn bg-soft px-4 py-3 text-ink" role="alert">
+        <p className="rounded-btn border border-line bg-surface px-4 py-3 text-ink" role="alert">
           {errorMessage}
         </p>
       ) : null}

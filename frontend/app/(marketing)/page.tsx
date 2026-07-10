@@ -16,7 +16,7 @@ export default function HomePage() {
       <section className="relative isolate min-h-[78vh] overflow-hidden border-b border-line">
         <Image
           src="/images/hero-classroom.jpg"
-          alt="Nick Moore tutoring pupils in the classroom"
+          alt="Nick Moore tutoring pupils one-to-one in a classroom"
           fill
           priority
           className="object-cover object-[center_42%]"
@@ -51,7 +51,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-card shadow-soft sm:aspect-[5/4] lg:aspect-[4/5]">
             <Image
               src="/images/portrait.jpg"
-              alt="Nick Moore, tutor at Moore Tuition"
+              alt="Portrait of Nick Moore, entrance exam tutor at Moore Tuition"
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -91,19 +91,19 @@ export default function HomePage() {
                 title: "English",
                 body: "Comprehension, spelling, punctuation and grammar, building pupils' ability to read closely and write cohesively.",
                 image: "/images/kids-handwriting.jpg",
-                imageAlt: "Pupil practising handwriting",
+                imageAlt: "Close-up of a pupil writing vocabulary notes by hand",
               },
               {
                 title: "Maths",
                 body: "Calculation speed, times tables, the four operations, number relationships, measurement, mental arithmetic, geometry and data handling.",
                 image: "/images/maths.jpg",
-                imageAlt: "Maths doodle illustration",
+                imageAlt: "Hand-drawn maths doodles including numbers, shapes and formulae",
               },
               {
                 title: "Reasoning",
                 body: "Verbal Reasoning to stretch potential ability, and Non-Verbal Reasoning to sharpen logical thinking.",
                 image: "/images/Reasoning.jpg",
-                imageAlt: "Non-verbal reasoning practice questions",
+                imageAlt: "Non-verbal reasoning cube net practice questions on a worksheet",
               },
             ].map((item) => (
               <div

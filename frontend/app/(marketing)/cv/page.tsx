@@ -46,7 +46,7 @@ export default function CvPage() {
             <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full border-4 border-soft shadow-soft">
               <Image
                 src="/images/portrait.jpg"
-                alt="Nick Moore"
+                alt="Portrait of Nick Moore"
                 fill
                 className="object-cover object-top"
                 sizes="144px"

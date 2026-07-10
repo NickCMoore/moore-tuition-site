@@ -1,6 +1,7 @@
 import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { MobileCallBar } from "@/components/MobileCallBar";
 import Link from "next/link";
 
 export default function NotFound() {
@@ -9,7 +10,7 @@ export default function NotFound() {
       <Header />
       <main
         id="main-content"
-        className="flex flex-1 flex-col items-center justify-center px-6 py-24 text-center"
+        className="flex flex-1 flex-col items-center justify-center px-6 py-24 pb-32 text-center md:pb-24"
       >
         <p className="font-head text-sm font-semibold uppercase tracking-wide text-blue">
           404
@@ -32,6 +33,7 @@ export default function NotFound() {
         </div>
       </main>
       <Footer />
+      <MobileCallBar />
     </>
   );
 }

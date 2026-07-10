@@ -15,25 +15,25 @@ const subjects = [
     title: "English",
     body: "Comprehension, spelling, punctuation and grammar, building pupils' ability to read closely and write cohesively, from primary curriculum support through to 11+ and 13+ papers.",
     image: "/images/kids-handwriting.jpg",
-    imageAlt: "Pupil practising handwriting and vocabulary",
+    imageAlt: "Close-up of a pupil writing vocabulary notes by hand",
   },
   {
     title: "Maths",
     body: "Calculation speed, times tables, the four operations, number relationships, measurement, mental arithmetic, geometry and data handling, with exam technique for timed papers.",
     image: "/images/maths.jpg",
-    imageAlt: "Maths doodle illustration",
+    imageAlt: "Hand-drawn maths doodles including numbers, shapes and formulae",
   },
   {
     title: "Verbal Reasoning",
     body: "Verbal Reasoning tests a pupil's potential ability rather than just what they can already do. We work on the patterns and thinking skills behind the question types, not just rote practice.",
     image: "/images/verbal-reasoning.jpg",
-    imageAlt: "Example verbal reasoning letter sequence and word analogy questions",
+    imageAlt: "Verbal reasoning worksheet with letter sequences and word analogies",
   },
   {
     title: "Non-Verbal Reasoning",
     body: "Non-Verbal Reasoning tests logic rather than academic capability, so sessions focus on spotting patterns, sequences and relationships between shapes.",
     image: "/images/Reasoning.jpg",
-    imageAlt: "Example non-verbal reasoning cube net questions",
+    imageAlt: "Non-verbal reasoning cube net practice questions on a worksheet",
   },
 ];
 
