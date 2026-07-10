@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fredoka, Lexend } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -68,6 +69,7 @@ export default function RootLayout({
       className={`${fredoka.variable} ${lexend.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-body text-ink bg-ground">
+        <JsonLd />
         {children}
       </body>
     </html>
