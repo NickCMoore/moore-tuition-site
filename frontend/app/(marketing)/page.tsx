@@ -45,11 +45,11 @@ export default function HomePage() {
     <>
       <section className="relative isolate min-h-[78vh] overflow-hidden border-b border-line">
         <Image
-          src="/images/hero-classroom.jpg"
+          src="/images/hero-classroom-wide.jpg"
           alt="Nick Moore tutoring pupils one-to-one in a classroom"
           fill
           priority
-          className="object-cover object-[center_42%]"
+          className="object-cover object-center"
           sizes="100vw"
         />
         <div
@@ -166,37 +166,50 @@ export default function HomePage() {
           <h2 className="font-head text-3xl font-semibold text-ink">
             How it works
           </h2>
-          <ol className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="mt-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-0">
             {[
               {
                 step: "1",
                 title: "Get in touch",
-                body: "Get in touch for a free 15-minute chat.",
+                body: "A free 15-minute chat to see if we're a good fit.",
               },
               {
                 step: "2",
                 title: "Initial assessment",
-                body: "Initial assessment session to understand your child's level.",
+                body: "A first session to understand your child's level.",
               },
               {
                 step: "3",
                 title: "Regular weekly sessions",
-                body: "Regular weekly sessions tailored to their goals.",
+                body: "Weekly lessons tailored to their goals.",
               },
               {
                 step: "4",
                 title: "Progress feedback",
-                body: "Clear progress feedback to parents after every session.",
+                body: "Clear updates for parents after every session.",
               },
-            ].map((item) => (
-              <li key={item.step} className="border-l-4 border-blue pl-5">
-                <p className="text-sm font-semibold uppercase tracking-wide text-blue">
-                  Step {item.step}
-                </p>
-                <h3 className="mt-1 font-head text-xl font-semibold text-ink">
-                  {item.title}
-                </h3>
-                <p className="mt-2 leading-relaxed text-muted">{item.body}</p>
+            ].map((item, index, list) => (
+              <li
+                key={item.step}
+                className="relative flex flex-1 gap-4 lg:flex-col lg:gap-4 lg:pr-10"
+              >
+                {index < list.length - 1 ? (
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute right-1 top-4 hidden text-2xl leading-none text-blue-soft lg:block"
+                  >
+                    →
+                  </span>
+                ) : null}
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue font-head text-lg font-semibold text-white">
+                  {item.step}
+                </span>
+                <div>
+                  <h3 className="font-head text-xl font-semibold text-ink">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-muted">{item.body}</p>
+                </div>
               </li>
             ))}
           </ol>
