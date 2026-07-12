@@ -1,3 +1,4 @@
+import { Button } from "@/components/Button";
 import { PageHeader } from "@/components/PageHeader";
 import { pageMetadata } from "@/lib/metadata";
 import { getResourceBySlug, resources } from "@/lib/resources";
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: ResourcePageProps) {
   if (!article) return {};
 
   return pageMetadata({
-    title: article.title,
+    title: article.metaTitle ?? article.title,
     description: article.description,
     path: `/resources/${article.slug}`,
   });
@@ -42,12 +43,36 @@ export default async function ResourceArticlePage({ params }: ResourcePageProps)
               Resources
             </Link>
           </p>
-          <article className="mt-8 space-y-4">
-            {article.intro.map((paragraph) => (
-              <p key={paragraph} className="text-lg leading-relaxed text-muted">
-                {paragraph}
-              </p>
-            ))}
+          <article className="mt-8 space-y-6">
+            {article.body.map((block, index) => {
+              if (block.type === "heading") {
+                return (
+                  <h2
+                    key={`heading-${index}`}
+                    className="font-head text-2xl font-semibold text-ink"
+                  >
+                    {block.text}
+                  </h2>
+                );
+              }
+
+              if (block.type === "cta") {
+                return (
+                  <div key={`cta-${index}`} className="pt-2">
+                    <Button href={block.href}>{block.label}</Button>
+                  </div>
+                );
+              }
+
+              return (
+                <p
+                  key={`paragraph-${index}`}
+                  className="text-lg leading-relaxed text-muted"
+                >
+                  {block.text}
+                </p>
+              );
+            })}
           </article>
           <p className="mt-10">
             <Link
