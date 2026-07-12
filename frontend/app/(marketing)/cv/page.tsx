@@ -6,7 +6,7 @@ import Image from "next/image";
 export const metadata = pageMetadata({
   title: "CV",
   description:
-    "Nick Moore's teaching CV: preparatory school experience since 2015, PGCE Primary Education, BMus, and Enhanced DBS check. Tutoring for 7+, 11+ and 13+.",
+    "Nick Moore's teaching CV: preparatory school experience since 2015, PGCE Primary Education, BMus, and Enhanced DBS check. Tutoring for 7+, 8+, 11+, 13+ and KS1–KS3.",
   path: "/cv",
 });
 

@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "Rates",
   description:
-    "Simple per-session tutoring rates for 30, 45 or 60 minutes for 7+, 11+ and 13+, in person in Lymm or online.",
+    "Simple per-session tutoring rates for 30, 45 or 60 minutes — 7+, 8+, 11+, 13+ and KS1–KS3 English and Maths, in person in Lymm or online.",
   path: "/rates",
 });
 

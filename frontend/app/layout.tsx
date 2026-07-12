@@ -19,7 +19,7 @@ const lexend = Lexend({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteName} | 7+, 11+ & 13+ Tutoring in Lymm, Cheshire`,
+    default: `${siteName} | 7+, 11+, 13+ & KS1–KS3 Tutoring in Lymm, Cheshire`,
     template: `%s | ${siteName}`,
   },
   description: defaultDescription,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: siteUrl,
     siteName,
-    title: `${siteName} | 7+, 11+ & 13+ Tutoring in Lymm, Cheshire`,
+    title: `${siteName} | 7+, 11+, 13+ & KS1–KS3 Tutoring in Lymm, Cheshire`,
     description: defaultDescription,
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteName} | 7+, 11+ & 13+ Tutoring`,
+    title: `${siteName} | 7+, 11+, 13+ & KS1–KS3 Tutoring`,
     description: defaultDescription,
     images: ["/images/og-image.jpg"],
   },

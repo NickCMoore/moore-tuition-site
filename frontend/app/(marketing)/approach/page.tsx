@@ -6,7 +6,7 @@ import Image from "next/image";
 export const metadata = pageMetadata({
   title: "My Approach",
   description:
-    "A child-centred tutoring approach for 7+, 11+ and 13+, with tailored lessons, exam technique, and clear communication with parents.",
+    "A child-centred tutoring approach for 7+, 8+, 11+ and 13+ and KS1–KS3 English and Maths, with tailored lessons, exam technique, and clear parent communication.",
   path: "/approach",
 });
 
@@ -35,13 +35,15 @@ export default function ApproachPage() {
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
               My approach is child-centred and adaptable, so each pupil gets
-              lessons that suit their learning style and goals. I aim for a
-              supportive, engaging environment where students feel motivated to
-              do their best, whether we&apos;re preparing for a highly competitive
-              school or building confidence in a challenging subject.
+              lessons that suit their learning style and goals — whether that is
+              7+, 8+, 11+ or 13+ preparation, or general English and Maths
+              support across KS1–KS3. I aim for a supportive, engaging
+              environment where students feel motivated to do their best,
+              whether we&apos;re preparing for a highly competitive school or
+              building confidence in a challenging subject.
             </p>
             <p className="mt-3 leading-relaxed text-muted">
-              I break entrance exams into their fundamental parts:
+              For entrance exams, I break the work into its fundamental parts:
               comprehension, grammar, mental arithmetic and problem-solving.
               I also build in revision strategies and exam technique alongside the
               subject content, so pupils arrive at the exam room prepared and

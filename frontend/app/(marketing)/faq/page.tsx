@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata = pageMetadata({
   title: "FAQ",
   description:
-    "FAQs about Moore Tuition: results, online vs in-person, 7+, 11+ and 13+ exam boards, qualifications and DBS.",
+    "FAQs about Moore Tuition: results, online vs in-person, 7+, 8+, 11+ and 13+ exam boards (CEM, GL, ISEB), KS support, qualifications and DBS.",
   path: "/faq",
 });
 
@@ -20,7 +20,7 @@ export const faqs = [
   {
     question: "Which exams and boards do you cover?",
     answer:
-      "I tutor for 7+, 11+ and 13+ entrance exams in English, Maths and Reasoning, and I'm familiar with CEM, GL, ISEB and school-specific assessments.",
+      "I tutor for 7+, 8+, 11+ and 13+ entrance exams in English, Maths and Reasoning, and for general English and Maths across KS1–KS3. I'm familiar with CEM, GL, ISEB and school-specific assessments.",
   },
   {
     question: "Are all of your classes online?",

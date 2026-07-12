@@ -14,7 +14,9 @@ export function pageMetadata({
 }: PageMetaInput): Metadata {
   const url = `${siteUrl}${path === "/" ? "" : path}`;
   const fullTitle =
-    path === "/" ? `${siteName} | 7+, 11+ & 13+ Tutoring in Lymm, Cheshire` : title;
+    path === "/"
+      ? `${siteName} | 7+, 11+, 13+ & KS1–KS3 Tutoring in Lymm, Cheshire`
+      : title;
 
   return {
     title: path === "/" ? { absolute: fullTitle } : title,

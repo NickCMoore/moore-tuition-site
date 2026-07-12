@@ -17,7 +17,7 @@ export const mooreTuitionJsonLd = {
   image: `${siteUrl}/images/og-image.jpg`,
   logo: `${siteUrl}/images/logo.png`,
   description:
-    "1-to-1 English, Maths and Reasoning tutoring for 7+, 11+ and 13+ entrance exams, offered in person in Lymm, Cheshire or online across the UK.",
+    "1-to-1 tutoring for 7+, 8+, 11+ and 13+ entrance exams, plus KS1–KS3 English and Maths support, offered in person in Lymm, Cheshire or online across the UK. Familiar with CEM, GL, ISEB and school-specific assessments.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lymm",
@@ -48,6 +48,25 @@ export const mooreTuitionJsonLd = {
     },
   ],
   priceRange: "£30-£50",
+  knowsAbout: [
+    "7+ entrance exams",
+    "8+ entrance exams",
+    "11+ entrance exams",
+    "13+ entrance exams",
+    "CEM",
+    "GL Assessment",
+    "ISEB",
+    "English tutoring",
+    "Maths tutoring",
+    "Verbal Reasoning",
+    "Non-Verbal Reasoning",
+    "KS1 English and Maths",
+    "KS2 English and Maths",
+    "KS3 English and Maths",
+    "Cello tuition",
+    "Piano tuition",
+    "Music theory",
+  ],
   makesOffer: [
     {
       "@type": "Offer",
@@ -56,9 +75,9 @@ export const mooreTuitionJsonLd = {
       name: "30-minute tutoring session",
       itemOffered: {
         "@type": "Service",
-        name: "Entrance exam tutoring",
+        name: "1-to-1 academic tutoring",
         description:
-          "1-to-1 English, Maths and Reasoning tutoring for 7+, 11+ and 13+ entrance exams, in person in Lymm or online.",
+          "7+, 8+, 11+ and 13+ preparation (English, Maths and Reasoning as required), KS1–KS3 English and Maths support, and optional music tuition, in person in Lymm or online.",
       },
     },
     {
@@ -68,7 +87,9 @@ export const mooreTuitionJsonLd = {
       name: "45-minute tutoring session",
       itemOffered: {
         "@type": "Service",
-        name: "Entrance exam tutoring",
+        name: "1-to-1 academic tutoring",
+        description:
+          "Entrance exam preparation and KS1–KS3 English and Maths support, in person in Lymm or online.",
       },
     },
     {
@@ -78,7 +99,9 @@ export const mooreTuitionJsonLd = {
       name: "60-minute tutoring session",
       itemOffered: {
         "@type": "Service",
-        name: "Entrance exam tutoring",
+        name: "1-to-1 academic tutoring",
+        description:
+          "Entrance exam preparation and KS1–KS3 English and Maths support, in person in Lymm or online.",
       },
     },
   ],

@@ -10,7 +10,7 @@ import { ContactForm } from "./ContactForm";
 export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Get in touch with Moore Tuition in Lymm, Cheshire by email, phone, or send a message about 7+, 11+ and 13+ tutoring.",
+    "Get in touch with Moore Tuition in Lymm, Cheshire by email, phone, or send a message about 7+, 8+, 11+, 13+ or KS1–KS3 tutoring.",
   path: "/contact",
 });
 

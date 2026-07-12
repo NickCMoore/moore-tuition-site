@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata = pageMetadata({
   title: "Home",
   description:
-    "1-to-1 English, Maths and Reasoning tutoring for 7+, 11+ and 13+ entrance exams, in person in Lymm, Cheshire or online across the UK.",
+    "1-to-1 tutoring for 7+, 8+, 11+ and 13+, plus KS1–KS3 English and Maths support, in person in Lymm, Cheshire or online across the UK.",
   path: "/",
 });
 
@@ -34,8 +34,9 @@ export default function HomePage() {
             Learning beyond the classroom
           </h1>
           <p className="mt-4 max-w-xl motion-safe:animate-[fadeUp_0.7s_ease-out_0.16s_both] text-lg leading-relaxed text-white/90">
-            One-to-one Maths, English and Reasoning tutoring for 7+, 11+ and 13+
-            entrance exams, in person in Lymm, Cheshire, or online across the UK.
+            One-to-one English, Maths and Reasoning tutoring for 7+, 8+, 11+ and
+            13+, plus KS1–KS3 support, in person in Lymm, Cheshire, or online
+            across the UK.
           </p>
           <div className="mt-8 flex motion-safe:animate-[fadeUp_0.7s_ease-out_0.24s_both] flex-wrap gap-3">
             <Button href="/contact">Get in touch</Button>
@@ -63,14 +64,18 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">
               I&apos;m an experienced, empathetic preparatory school teacher,
-              tutoring children for entrance exams since 2015, including 7+, 11+
-              and 13+. I&apos;ve taught at leading London prep schools and helped
-              pupils gain places at schools such as St Paul&apos;s, Epsom College
-              and King&apos;s College School Wimbledon. I specialise in English,
-              Maths and Reasoning, and I&apos;m familiar with CEM, GL, ISEB and
-              school-specific assessments, always shaped around each pupil&apos;s
-              needs, whether that&apos;s a competitive entrance process or
-              building confidence in a tricky subject.
+              tutoring children since 2015 for 7+, 8+, 11+ and 13+, as well as
+              general English and Maths across KS1–KS3. I&apos;ve taught at
+              leading London prep schools and helped pupils gain places at
+              schools such as St Paul&apos;s, Epsom College and King&apos;s
+              College School Wimbledon. I specialise in English, Maths and
+              Reasoning, and I&apos;m familiar with CEM, GL, ISEB and
+              school-specific assessments.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted">
+              Whether your child is preparing for highly competitive schools or
+              building confidence in challenging subjects, lessons are tailored
+              to their needs.
             </p>
             <Link
               href="/approach"
@@ -85,46 +90,35 @@ export default function HomePage() {
       <section className="border-b border-line px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <h2 className="font-head text-3xl font-semibold text-ink">What I teach</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
+            Entrance exam preparation for 7+, 8+, 11+ and 13+, alongside general
+            English and Maths support across KS1, KS2 and KS3 — including CEM,
+            GL, ISEB and school-specific formats.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                title: "English",
-                body: "Comprehension, spelling, punctuation and grammar, building pupils' ability to read closely and write cohesively.",
-                image: "/images/kids-handwriting.jpg",
-                imageAlt: "Close-up of a pupil writing vocabulary notes by hand",
+                title: "7+ and 8+",
+                body: "English and Maths foundations for junior entrance.",
               },
               {
-                title: "Maths",
-                body: "Calculation speed, times tables, the four operations, number relationships, measurement, mental arithmetic, geometry and data handling.",
-                image: "/images/maths.jpg",
-                imageAlt: "Hand-drawn maths doodles including numbers, shapes and formulae",
+                title: "11+",
+                body: "English, Maths, Verbal and Non-Verbal Reasoning.",
               },
               {
-                title: "Reasoning",
-                body: "Verbal Reasoning to stretch potential ability, and Non-Verbal Reasoning to sharpen logical thinking.",
-                image: "/images/Reasoning.jpg",
-                imageAlt: "Non-verbal reasoning cube net practice questions on a worksheet",
+                title: "13+",
+                body: "English, Maths and Non-Verbal Reasoning.",
+              },
+              {
+                title: "KS1–KS3 support",
+                body: "Curriculum help and confidence building, not only exams.",
               },
             ].map((item) => (
-              <div
-                key={item.title}
-                className="overflow-hidden rounded-card border border-line bg-surface shadow-soft"
-              >
-                <div className="relative h-36 bg-soft">
-                  <Image
-                    src={item.image}
-                    alt={item.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-head text-xl font-semibold text-ink">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 leading-relaxed text-muted">{item.body}</p>
-                </div>
+              <div key={item.title} className="border-l-4 border-blue pl-5">
+                <h3 className="font-head text-xl font-semibold text-ink">
+                  {item.title}
+                </h3>
+                <p className="mt-2 leading-relaxed text-muted">{item.body}</p>
               </div>
             ))}
           </div>
