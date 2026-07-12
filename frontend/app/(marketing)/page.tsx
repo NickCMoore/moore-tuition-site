@@ -54,7 +54,7 @@ export default function HomePage() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/40 to-ink/15"
+          className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/20"
         />
         <div className="relative mx-auto flex min-h-[78vh] max-w-5xl flex-col justify-center px-6 py-20">
           <p className="motion-safe:animate-[fadeUp_0.7s_ease-out] font-head text-4xl font-semibold tracking-tight text-white sm:text-6xl">
@@ -63,7 +63,7 @@ export default function HomePage() {
           <h1 className="mt-4 max-w-2xl motion-safe:animate-[fadeUp_0.7s_ease-out_0.08s_both] font-head text-2xl font-medium text-white sm:text-3xl">
             Learning beyond the classroom
           </h1>
-          <p className="mt-4 max-w-xl motion-safe:animate-[fadeUp_0.7s_ease-out_0.16s_both] text-lg leading-relaxed text-white/90">
+          <p className="mt-4 max-w-xl motion-safe:animate-[fadeUp_0.7s_ease-out_0.16s_both] text-lg leading-relaxed text-white">
             One-to-one English, Maths and Reasoning tutoring for 7+, 8+, 11+ and
             13+, plus KS1–KS3 support, in person in Lymm, Cheshire, or online
             across the UK.

@@ -20,7 +20,7 @@ export function Button({
     variant === "primary"
       ? "bg-blue text-white shadow-[0_4px_14px_rgba(77,134,197,0.35)] hover:bg-blue-deep"
       : variant === "onDark"
-        ? "border-2 border-white/55 bg-white/10 text-white hover:border-white hover:bg-white/20"
+        ? "border-2 border-white/80 bg-ink/35 text-white hover:border-white hover:bg-ink/50"
         : "border-2 border-blue-soft bg-surface text-blue-deep hover:border-blue hover:bg-soft";
 
   return (
