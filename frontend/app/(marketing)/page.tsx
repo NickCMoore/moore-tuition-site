@@ -103,6 +103,12 @@ export default function HomePage() {
               school-specific assessments.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted">
+              Having led Maths at a leading London prep school and now working
+              in professional assessment development, I understand entrance exams
+              from both sides: how children experience them and how they&apos;re
+              built.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted">
               Whether your child is preparing for highly competitive schools or
               building confidence in challenging subjects, lessons are tailored
               to their needs.

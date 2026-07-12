@@ -19,12 +19,12 @@ export default function ApproachPage() {
       />
       <section className="px-6 py-14">
         <div className="mx-auto max-w-3xl space-y-8">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-card shadow-soft">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-card shadow-soft sm:aspect-[16/10]">
             <Image
-              src="/images/teacher-student.jpg"
-              alt="Nick Moore working one-to-one with a pupil over books and notes"
+              src="/images/hero-classroom.jpg"
+              alt="Nick Moore tutoring pupils one-to-one in a classroom"
               fill
-              className="object-cover object-center"
+              className="object-cover object-[center_40%]"
               sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>
@@ -60,6 +60,12 @@ export default function ApproachPage() {
               including CEM, GL, ISEB and school-specific assessments. That means
               we can practise in the style your child will actually meet on the
               day, not just generic worksheets.
+            </p>
+            <p className="mt-3 leading-relaxed text-muted">
+              Having led Maths at a leading London prep school and now working
+              in professional assessment development, I understand entrance exams
+              from both sides: how children experience them and how they&apos;re
+              built.
             </p>
           </div>
 

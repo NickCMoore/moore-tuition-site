@@ -17,9 +17,14 @@ const experience = [
     body: "London and Manchester. Helping students prepare for 7+, 11+ and 13+ entrance exams and secure places at top senior schools.",
   },
   {
+    years: "2023 to Present",
+    title: "Assessment Developer",
+    body: "Developing professional examinations for a leading assessment provider, with direct insight into how tests are designed and standardised.",
+  },
+  {
     years: "2017 to 2023",
     title: "Key Stage 2 Teacher",
-    body: "Rokeby Prep School, Kingston Upon Thames. Taught Year 4 and Year 5 classes, with an emphasis on differentiation of tasks to meet varied pupil needs and regular parent communication.",
+    body: "Rokeby Preparatory School, Kingston Upon Thames. Taught Year 4 and Year 5 classes, with an emphasis on differentiation of tasks to meet varied pupil needs. Key responsibilities included Middle School Maths Lead and PSHEE Coordinator, alongside pastoral care with regular parent liaison. Coached rugby, football and cricket teams.",
   },
   {
     years: "2015 to 2017",
@@ -95,11 +100,19 @@ export default function CvPage() {
             </div>
             <div className="rounded-card border border-line bg-surface p-6 shadow-soft">
               <h3 className="font-head text-lg font-semibold text-ink">
-                BMus
+                BMus (Hons)
               </h3>
               <p className="mt-2 text-muted">University of Edinburgh.</p>
             </div>
-            <div className="rounded-card border border-line bg-surface p-6 shadow-soft sm:col-span-2">
+            <div className="rounded-card border border-line bg-surface p-6 shadow-soft">
+              <h3 className="font-head text-lg font-semibold text-ink">
+                Uppingham School
+              </h3>
+              <p className="mt-2 text-muted">
+                Educated at Uppingham School before university.
+              </p>
+            </div>
+            <div className="rounded-card border border-line bg-surface p-6 shadow-soft">
               <h3 className="font-head text-lg font-semibold text-ink">
                 Enhanced DBS Check
               </h3>
@@ -108,6 +121,18 @@ export default function CvPage() {
               </p>
             </div>
           </div>
+
+          <h2 className="mt-12 font-head text-2xl font-semibold text-ink">
+            Beyond the classroom
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted">
+            Outside lessons, I&apos;m a former Taekwondo instructor and 4th degree
+            black belt, an orchestral and choral musician whose compositions have
+            been performed at Washington Cathedral, and a keen hillwalker who
+            organised a Three Peaks Challenge raising over £10,000 for charity.
+            That mix of discipline, creativity and outdoors grit is part of who
+            your child will be learning with.
+          </p>
 
           <div className="mt-10">
             <Button href="/contact">Get in touch</Button>
