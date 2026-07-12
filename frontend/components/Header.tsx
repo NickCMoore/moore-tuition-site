@@ -70,7 +70,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/80 bg-surface/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line/80 bg-surface">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-6 py-3">
         <Link href="/" className="relative z-10 flex items-center no-underline">
           <Image
@@ -79,6 +79,7 @@ export function Header() {
             width={228}
             height={158}
             className="h-12 w-auto sm:h-14"
+            sizes="112px"
             priority
           />
         </Link>
