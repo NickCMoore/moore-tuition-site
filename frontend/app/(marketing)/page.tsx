@@ -10,6 +10,36 @@ export const metadata = pageMetadata({
   path: "/",
 });
 
+type Testimonial = {
+  quote: string;
+  name?: string;
+  relationship: string;
+  yearGroup?: string;
+};
+
+const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Nick is very engaged with both pupil and parent. He seems to understand and build upon the pupil's progress in school and is quick to highlight pupils' strengths and areas for development.",
+    relationship:
+      "Parent of an 11+ student preparing for Hampton School and Reed's School",
+  },
+  {
+    quote:
+      "Nick works with our son to introduce topics slowly, with a focus on the structure and technical detail needed in exams.",
+    relationship: "Parent of an 11+ student focusing on exam technique",
+  },
+];
+
+function TestimonialAttribution({
+  name,
+  relationship,
+  yearGroup,
+}: Pick<Testimonial, "name" | "relationship" | "yearGroup">) {
+  const parts = [name, relationship, yearGroup].filter(Boolean);
+  return <>{parts.join(" · ")}</>;
+}
+
 export default function HomePage() {
   return (
     <>
@@ -39,7 +69,7 @@ export default function HomePage() {
             across the UK.
           </p>
           <div className="mt-8 flex motion-safe:animate-[fadeUp_0.7s_ease-out_0.24s_both] flex-wrap gap-3">
-            <Button href="/contact">Get in touch</Button>
+            <Button href="/contact">Book a free 15-minute chat</Button>
             <Button href="/rates" variant="onDark">
               View rates
             </Button>
@@ -134,26 +164,66 @@ export default function HomePage() {
       <section className="border-b border-line bg-surface px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <h2 className="font-head text-3xl font-semibold text-ink">
+            How it works
+          </h2>
+          <ol className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                step: "1",
+                title: "Get in touch",
+                body: "Get in touch for a free 15-minute chat.",
+              },
+              {
+                step: "2",
+                title: "Initial assessment",
+                body: "Initial assessment session to understand your child's level.",
+              },
+              {
+                step: "3",
+                title: "Regular weekly sessions",
+                body: "Regular weekly sessions tailored to their goals.",
+              },
+              {
+                step: "4",
+                title: "Progress feedback",
+                body: "Clear progress feedback to parents after every session.",
+              },
+            ].map((item) => (
+              <li key={item.step} className="border-l-4 border-blue pl-5">
+                <p className="text-sm font-semibold uppercase tracking-wide text-blue">
+                  Step {item.step}
+                </p>
+                <h3 className="mt-1 font-head text-xl font-semibold text-ink">
+                  {item.title}
+                </h3>
+                <p className="mt-2 leading-relaxed text-muted">{item.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="border-b border-line px-6 py-16">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-head text-3xl font-semibold text-ink">
             What parents say
           </h2>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <blockquote className="rounded-card border border-line bg-ground p-8 text-lg leading-relaxed text-ink shadow-soft">
-              &ldquo;Nick is very engaged with both pupil and parent. He seems to
-              understand and build upon the pupil&apos;s progress in school and is
-              quick to highlight pupils&apos; strengths and areas for
-              development.&rdquo;
-              <footer className="mt-5 text-base font-medium text-muted">
-                Parent of an 11+ student preparing for Hampton School and
-                Reed&apos;s School
-              </footer>
-            </blockquote>
-            <blockquote className="rounded-card border border-line bg-ground p-8 text-lg leading-relaxed text-ink shadow-soft">
-              &ldquo;Nick works with our son to introduce topics slowly, with a
-              focus on the structure and technical detail needed in exams.&rdquo;
-              <footer className="mt-5 text-base font-medium text-muted">
-                Parent of an 11+ student focusing on exam technique
-              </footer>
-            </blockquote>
+            {testimonials.map((item) => (
+              <blockquote
+                key={item.quote}
+                className="rounded-card border border-line bg-surface p-8 text-lg leading-relaxed text-ink shadow-soft"
+              >
+                &ldquo;{item.quote}&rdquo;
+                <footer className="mt-5 text-base font-medium text-muted">
+                  <TestimonialAttribution
+                    name={item.name}
+                    relationship={item.relationship}
+                    yearGroup={item.yearGroup}
+                  />
+                </footer>
+              </blockquote>
+            ))}
           </div>
           <p className="mt-6 max-w-3xl text-muted">
             Happy to talk through how sessions work and whether I&apos;m a good

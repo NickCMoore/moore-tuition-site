@@ -24,6 +24,10 @@ export default function RatesPage() {
       />
       <section className="px-6 py-14">
         <div className="mx-auto max-w-5xl">
+          <p className="mb-8 max-w-3xl text-lg leading-relaxed text-muted">
+            Not sure where to start? The first step is a free 15-minute phone chat
+            — no commitment.
+          </p>
           <div className="grid gap-6 sm:grid-cols-3">
             {rates.map((rate) => (
               <div
