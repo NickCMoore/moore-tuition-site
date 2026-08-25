@@ -47,7 +47,7 @@ export const mooreTuitionJsonLd = {
       closes: "20:00",
     },
   ],
-  priceRange: "£30-£50",
+  priceRange: "£35-£55",
   knowsAbout: [
     "7+ entrance exams",
     "8+ entrance exams",

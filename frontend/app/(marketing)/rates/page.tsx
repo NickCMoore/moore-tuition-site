@@ -10,9 +10,9 @@ export const metadata = pageMetadata({
 });
 
 const rates = [
-  { duration: "30 minutes", price: "£30" },
-  { duration: "45 minutes", price: "£40" },
-  { duration: "60 minutes", price: "£50" },
+  { duration: "30 minutes", price: "£35" },
+  { duration: "45 minutes", price: "£45" },
+  { duration: "60 minutes", price: "£55" },
 ];
 
 export default function RatesPage() {
@@ -44,6 +44,9 @@ export default function RatesPage() {
               </div>
             ))}
           </div>
+          <p className="mt-4 text-sm text-muted">
+            These rates apply from 1 September 2026.
+          </p>
           <div className="mt-10 max-w-3xl space-y-4 text-lg leading-relaxed text-muted">
             <p>
               Each session is one-to-one and includes tailored teaching, exam
