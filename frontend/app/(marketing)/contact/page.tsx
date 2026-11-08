@@ -3,7 +3,6 @@ import { pageMetadata } from "@/lib/metadata";
 import {
   contactEmail,
   contactPhoneDisplay,
-  contactPostcode,
 } from "@/lib/site";
 import { ContactForm } from "./ContactForm";
 
@@ -64,7 +63,7 @@ export default function ContactPage() {
                 Location
               </h3>
               <p className="mt-2 text-muted">
-                Lymm, Cheshire {contactPostcode}
+                Lymm, Cheshire
               </p>
 
               <h3 className="mt-6 font-head text-lg font-semibold text-ink">
