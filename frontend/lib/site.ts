@@ -8,7 +8,6 @@ export const defaultDescription =
 export const contactEmail = "moorenickc@protonmail.com";
 export const contactPhoneDisplay = "07782 216304";
 export const contactPhoneTel = "+447782216304";
-export const contactPostcode = "WA13 0SN";
 
 /** Stable sitemap dates (YYYY-MM-DD) so builds don't look artificially fresh. */
 export const sitemapLastModified = "2026-07-12";

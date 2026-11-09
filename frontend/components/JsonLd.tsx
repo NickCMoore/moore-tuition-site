@@ -1,7 +1,6 @@
 import {
   contactEmail,
   contactPhoneTel,
-  contactPostcode,
   siteUrl,
 } from "@/lib/site";
 
@@ -22,7 +21,6 @@ export const mooreTuitionJsonLd = {
     "@type": "PostalAddress",
     addressLocality: "Lymm",
     addressRegion: "Cheshire",
-    postalCode: contactPostcode,
     addressCountry: "GB",
   },
   areaServed: [
@@ -70,7 +68,7 @@ export const mooreTuitionJsonLd = {
   makesOffer: [
     {
       "@type": "Offer",
-      price: "30",
+      price: "35",
       priceCurrency: "GBP",
       name: "30-minute tutoring session",
       itemOffered: {
@@ -82,7 +80,7 @@ export const mooreTuitionJsonLd = {
     },
     {
       "@type": "Offer",
-      price: "40",
+      price: "45",
       priceCurrency: "GBP",
       name: "45-minute tutoring session",
       itemOffered: {
@@ -94,7 +92,7 @@ export const mooreTuitionJsonLd = {
     },
     {
       "@type": "Offer",
-      price: "50",
+      price: "55",
       priceCurrency: "GBP",
       name: "60-minute tutoring session",
       itemOffered: {
